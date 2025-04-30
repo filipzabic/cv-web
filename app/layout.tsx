@@ -1,6 +1,7 @@
 import '@mantine/core/styles.css';
 
 import React from 'react';
+import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { ColorSchemeScript, mantineHtmlProps, MantineProvider } from '@mantine/core';
 
@@ -23,6 +24,7 @@ export default function RootLayout({ children }: { children: any }) {
       <body>
         <MantineProvider>{children}</MantineProvider>
         <SpeedInsights />
+        <Analytics />
       </body>
     </html>
   );
