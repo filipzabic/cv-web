@@ -28,13 +28,13 @@ export default function Skills() {
         Key technologies
       </Title>
       <List size="sm">
-        <SimpleGrid cols={{ base: 1, sm: 2, lg: 2 }} spacing={18}>
+        <SimpleGrid cols={{ base: 1, sm: 2, lg: 2 }} spacing={10}>
           {skillsData.map((skill, index) => (
             <List.Item
               key={index}
               icon={
-                <ThemeIcon color="blue" size={34} radius="lg">
-                  <skill.icon size={28} stroke={1.1} />
+                <ThemeIcon color="blue" size={35} radius="md">
+                  <skill.icon size={30} stroke={1} />
                 </ThemeIcon>
               }
             >

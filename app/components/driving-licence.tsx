@@ -21,7 +21,7 @@ export default function DrivingLicence() {
               key={index}
               icon={
                 <ThemeIcon color="blue" size={30} radius="xl">
-                  <licence.icon size={20} />
+                  <licence.icon size={22} stroke={1.2} />
                 </ThemeIcon>
               }
             >

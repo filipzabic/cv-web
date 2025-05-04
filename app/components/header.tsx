@@ -13,15 +13,15 @@ export const Header = () => {
 
   return (
     <>
-      <BackgroundImage src="background-image.jpg" h={250} style={{ backgroundPositionY: '33%' }} />
+      <BackgroundImage src="background-image.jpg" h={220} style={{ backgroundPositionY: '33%' }} />
       <Image
         radius="lg"
-        src="profilna.jpg"
+        src="profile-image.jpg"
         style={{ border: '4px solid white' }}
         h={180}
-        w="auto"
+        w={180}
         ml={20}
-        mt={-120}
+        mt={-130}
       />
       <Group mt={-45} ml={205} gap={5}>
         <ActionIcon

@@ -5,7 +5,7 @@ const workExperience = [
   {
     company: 'Infobip',
     position: 'Software Engineer',
-    duration: '2023 - Present',
+    duration: '2022 - Present',
     bulletPoints: [
       'Development of modern and responsive frontend applications using React, TypeScript, HTML and CSS',
       "Development of RESTful API's using .NET and C#",
@@ -20,26 +20,12 @@ const workExperience = [
     website: 'https://www.infobip.com',
   },
   {
-    company: 'Infobip',
-    position: 'Software Engineering Intern',
-    duration: '2022 - 2023',
-    bulletPoints: [
-      'Development of a new web app using React, TypeScript, HTML and CSS',
-      'Learning about software development lifecycle and best practices',
-      'Learning about deployment and CI/CD pipelines',
-    ],
-    logoSrc: 'infobip-logo.png',
-    logoSize: 45,
-    location: 'Zagreb, Croatia',
-    website: 'https://www.infobip.com',
-  },
-  {
     company: 'Henkel',
     position: 'Business Automation Intern',
     duration: '2020 - 2022',
     bulletPoints: [
       'SAP and Excel automation',
-      'Web application development and integration with external services like MojeRacun',
+      'Web application development and integration with external services',
       'Technical assistance in hiring new interns',
       'Development of internal tools for data analysis and reporting using Python',
     ],

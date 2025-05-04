@@ -26,20 +26,20 @@ export default function HomePage() {
   ];
 
   return (
-    <Container my={50}>
+    <Container my={40}>
       <Card shadow="md" radius="md" withBorder>
         <Card.Section>
           <Header />
         </Card.Section>
 
-        <Card.Section pl={30} pt={20} pb={20} pr={20}>
+        <Card.Section pl={30} pt={15} pb={20} pr={20}>
           <About />
         </Card.Section>
 
         {sections.map((section, index) => (
           <React.Fragment key={index}>
-            <Divider my="sm" />
-            <Card.Section pl={30} pt={20} pb={20} pr={20}>
+            <Divider />
+            <Card.Section pl={30} pt={15} pb={15} pr={20}>
               <section.component />
             </Card.Section>
           </React.Fragment>

@@ -34,7 +34,7 @@ export default function Interests() {
               key={index}
               icon={
                 <ThemeIcon color="blue" size={30} radius="xl">
-                  <interest.icon size={20} />
+                  <interest.icon size={20} stroke={1.2} />
                 </ThemeIcon>
               }
             >

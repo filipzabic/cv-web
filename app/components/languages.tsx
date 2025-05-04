@@ -12,9 +12,9 @@ export default function Languages() {
       <Title order={2} mb={20}>
         Languages
       </Title>
-      <List size="md" spacing={10}>
+      <List size="md" spacing={8}>
         {languages.map((language, index) => (
-          <List.Item key={index} icon={<language.icon w={40} />}>
+          <List.Item key={index} icon={<language.icon w={35} />}>
             <Text fw={500} size="md">
               {language.name}
             </Text>

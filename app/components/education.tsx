@@ -4,7 +4,7 @@ import { Button, Group, Image, Text, Timeline, Title } from '@mantine/core';
 const education = [
   {
     year: '2020 - 2022',
-    title: 'Masters degree in Mechanical engineering',
+    title: 'MSc in Mechanical engineering',
     institution: 'Faculty of Mechanical Engineering and Naval Architecture',
     logoSrc: 'fsb-logo.png',
     location: 'Zagreb, Croatia',
@@ -12,7 +12,7 @@ const education = [
   },
   {
     year: '2014 - 2020',
-    title: 'Bachelors degree in Mechanical engineering',
+    title: 'BSc in Mechanical engineering',
     institution: 'Faculty of Mechanical Engineering and Naval Architecture',
     logoSrc: 'fsb-logo.png',
     location: 'Zagreb, Croatia',
