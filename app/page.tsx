@@ -39,7 +39,7 @@ export default function HomePage() {
         {sections.map((section, index) => (
           <React.Fragment key={index}>
             <Divider />
-            <Card.Section pl={30} pt={15} pb={15} pr={20}>
+            <Card.Section pl={30} pt={15} pb={15} pr={30}>
               <section.component />
             </Card.Section>
           </React.Fragment>
