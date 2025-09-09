@@ -10,7 +10,8 @@ export default function About() {
     <Grid gutter={30}>
       <Grid.Col span={6}>
         <Text size="md" c="dimmed">
-          Experienced software engineer with a strong background in backend and frontend development as well as IT infrastructure across various industries.
+          Experienced software engineer with a strong background in backend and frontend development
+          as well as IT infrastructure across various industries.
         </Text>
       </Grid.Col>
 
