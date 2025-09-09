@@ -3,9 +3,25 @@ import { Button, Group, Image, List, Text, Timeline, Title } from '@mantine/core
 
 const workExperience = [
   {
+    company: 'Aircash',
+    position: 'Software Engineer',
+    duration: '2025 - Present',
+    bulletPoints: [
+      'Development of backend systems and databases using .NET and SQL',
+      'Integration with third-party banking services and APIs',
+      'Monitoring and logging existing infrastructure using New Relic',
+      'Implementing new backend features for iOS and Android applications',
+      'Internal tools development using Angular and JavaScript',
+    ],
+    logoSrc: 'aircash-logo.jpg',
+    logoSize: 45,
+    location: 'Zagreb, Croatia',
+    website: 'https://www.aircash.eu',
+  },
+  {
     company: 'Infobip',
     position: 'Software Engineer',
-    duration: '2022 - Present',
+    duration: '2022 - 2025',
     bulletPoints: [
       'Development of modern and responsive frontend applications using React, TypeScript, HTML and CSS',
       "Development of RESTful API's using .NET and C#",
