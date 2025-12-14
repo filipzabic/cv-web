@@ -19,7 +19,7 @@ export default function Interests() {
     { name: 'Skiing', icon: IconSnowflake },
     { name: 'Running', icon: IconRun },
     { name: 'Hiking', icon: IconMountain },
-    { name: 'Flying glider planes', icon: IconPlane },
+    { name: 'Flying', icon: IconPlane },
   ];
 
   return (
@@ -27,7 +27,7 @@ export default function Interests() {
       <Title order={2} mb={20}>
         Interests
       </Title>
-      <List size="md" mb={20}>
+      <List size="md" mb={20} p={0}>
         <SimpleGrid cols={{ base: 1, sm: 2, lg: 2 }}>
           {interests.map((interest, index) => (
             <List.Item

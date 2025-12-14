@@ -1,0 +1,78 @@
+[
+  {
+    "company": "DECODE",
+    "position": "Senior Software Engineer",
+    "duration": "2025 - Present",
+    "bulletPoints": [
+      "Development of a new backend system using NestJS and PostgreSQL",
+      "Integration with third-party services and APIs"
+    ],
+    "logoSrc": "decode-logo.jpg",
+    "logoSize": 45,
+    "location": "Zagreb, Croatia",
+    "website": "https://www.decode.agency"
+  },
+  {
+    "company": "Aircash",
+    "position": "Software Engineer",
+    "duration": "2025 - Present",
+    "bulletPoints": [
+      "Development of backend systems and databases using .NET and SQL",
+      "Integration with third-party banking services and APIs",
+      "Monitoring and logging existing infrastructure using New Relic",
+      "Implementing new backend features for iOS and Android applications",
+      "Internal tools development using Angular and JavaScript"
+    ],
+    "logoSrc": "aircash-logo.jpg",
+    "logoSize": 45,
+    "location": "Zagreb, Croatia",
+    "website": "https://www.aircash.eu"
+  },
+  {
+    "company": "Infobip",
+    "position": "Software Engineer",
+    "duration": "2022 - 2025",
+    "bulletPoints": [
+      "Development of modern and responsive frontend applications using React, TypeScript, HTML and CSS",
+      "Development of RESTful API's using .NET and C#",
+      "Deployment of apps using Jenkins, Docker with CI/CD pipelines",
+      "Engineering support/bugfixing for customers",
+      "Monitoring and logging existing infrastructure using Grafana, Prometheus and Sentry",
+      "Implementing new features like Altcha bot prevention"
+    ],
+    "logoSrc": "infobip-logo.png",
+    "logoSize": 45,
+    "location": "Zagreb, Croatia",
+    "website": "https://www.infobip.com"
+  },
+  {
+    "company": "Henkel",
+    "position": "Business Automation Intern",
+    "duration": "2020 - 2022",
+    "bulletPoints": [
+      "SAP and Excel automation",
+      "Web application development and integration with external services",
+      "Technical assistance in hiring new interns",
+      "Development of internal tools for data analysis and reporting using Python"
+    ],
+    "logoSrc": "henkel-logo.png",
+    "logoSize": 26,
+    "location": "Zagreb, Croatia & Vienna, Austria",
+    "website": "https://www.henkel.com"
+  },
+  {
+    "company": "AVL",
+    "position": "Productive Tools Trainee",
+    "duration": "2018 - 2020",
+    "bulletPoints": [
+      "Maintenance of various scripts and plugins for Abaqus using Python",
+      "Bug reporting, reproduction and fixing",
+      "Post-processing and analysis of FEM simulations",
+      "Writing unit tests"
+    ],
+    "logoSrc": "avl-logo.png",
+    "logoSize": 45,
+    "location": "Zagreb, Croatia",
+    "website": "https://www.avl.com"
+  }
+]

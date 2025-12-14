@@ -1,11 +1,6 @@
 import { Grid, Stack, Text } from '@mantine/core';
 
 export default function About() {
-  const calculateAge = () => {
-    const birthYear = 1995;
-    const currentYear = new Date().getFullYear();
-    return currentYear - birthYear;
-  };
   return (
     <Grid gutter={30}>
       <Grid.Col span={6}>
@@ -17,7 +12,7 @@ export default function About() {
 
       <Grid.Col span={6}>
         <Stack gap={4}>
-          <Text size="md">{calculateAge()} years old</Text>
+          <Text size="md">{new Date().getFullYear() - 1995} years old</Text>
           <Text size="md">Zagreb, Croatia</Text>
           <Text size="md">filip@zabic.net</Text>
         </Stack>

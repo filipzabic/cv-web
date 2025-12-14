@@ -1,0 +1,26 @@
+[
+  {
+    "year": "2020 - 2022",
+    "title": "MSc in Mechanical engineering",
+    "institution": "Faculty of Mechanical Engineering and Naval Architecture",
+    "logoSrc": "fsb-logo.jpg",
+    "location": "Zagreb, Croatia",
+    "website": "https://www.fsb.unizg.hr"
+  },
+  {
+    "year": "2014 - 2020",
+    "title": "BSc in Mechanical engineering",
+    "institution": "Faculty of Mechanical Engineering and Naval Architecture",
+    "logoSrc": "fsb-logo.jpg",
+    "location": "Zagreb, Croatia",
+    "website": "https://www.fsb.unizg.hr"
+  },
+  {
+    "year": "2010 - 2014",
+    "title": "High School",
+    "institution": "XV Gymnasium",
+    "location": "Zagreb, Croatia",
+    "logoSrc": "xv-gymnasium-logo.png",
+    "website": "https://www.mioc.hr"
+  }
+]

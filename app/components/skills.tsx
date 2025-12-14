@@ -10,7 +10,7 @@ import {
 } from '@tabler/icons-react';
 import { List, SimpleGrid, Text, ThemeIcon, Title } from '@mantine/core';
 
-const skillsData = [
+const skills = [
   { name: 'React', icon: IconBrandReact },
   { name: '.NET', icon: IconCode },
   { name: 'Docker', icon: IconBrandDocker },
@@ -27,9 +27,9 @@ export default function Skills() {
       <Title order={2} mb={20}>
         Key technologies
       </Title>
-      <List size="sm">
+      <List size="sm" p={0}>
         <SimpleGrid cols={{ base: 1, sm: 2, lg: 2 }} spacing={10}>
-          {skillsData.map((skill, index) => (
+          {skills.map((skill, index) => (
             <List.Item
               key={index}
               icon={

@@ -1,4 +1,3 @@
-import React from 'react';
 import Flag from 'react-world-flags';
 import { Group, Text, Title } from '@mantine/core';
 
@@ -15,7 +14,7 @@ export default function Languages() {
       </Title>
       {languages.map((language, index) => (
         <Group key={index} mb={10}>
-          <Flag code={language.code} width={60} style={{ borderRadius: '4px' }} />
+          <Flag code={language.code} width={40} style={{ borderRadius: '4px' }} />
           <Text fw={500} size="md">
             {language.name}
           </Text>

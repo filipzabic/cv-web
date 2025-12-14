@@ -6,7 +6,7 @@ export default function DrivingLicence() {
     { name: 'Cars: B', icon: IconCar },
     { name: 'Motorcycles: A', icon: IconMotorbike },
     { name: 'Boats: B', icon: IconSpeedboat },
-    { name: 'Airplanes: LAPL (in progress)', icon: IconPlane },
+    { name: 'Airplanes: SRZ and SPL (in progress)', icon: IconPlane },
   ];
 
   return (
@@ -14,7 +14,7 @@ export default function DrivingLicence() {
       <Title order={2} mb={20}>
         Driving licences
       </Title>
-      <List size="md">
+      <List size="md" p={0}>
         <SimpleGrid cols={{ base: 1, sm: 2, lg: 2 }}>
           {licences.map((licence, index) => (
             <List.Item

@@ -60,7 +60,7 @@ export const Header = () => {
           )}
         </ActionIcon>
       </Group>
-      <Group ml={30} mt={10}>
+      <Group ml={30} mt={15}>
         <Title order={1}>Filip Žabić</Title>
       </Group>
     </>

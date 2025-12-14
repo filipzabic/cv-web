@@ -1,42 +1,6 @@
 import { IconLink } from '@tabler/icons-react';
 import { Button, Group, Image, List, Text, Timeline, Title } from '@mantine/core';
-
-const otherExperience = [
-  {
-    company: 'Dubrovnik MarryMe',
-    position: 'Website development and maintenance',
-    duration: '2020 - 2023',
-    bulletPoints: ['Adding new content and improvements'],
-    logoSrc: 'dubrovnik-marryme-logo.png',
-    logoSize: 30,
-    location: 'Zagreb, Croatia',
-    website: 'https://dubrovnik-marryme.com',
-  },
-  {
-    company: 'Solarium Suncokret',
-    position: 'Website development and maintenance',
-    duration: '2014 - 2016',
-    bulletPoints: [
-      'Initial website development in WordPress',
-      'New logo design',
-      'Continuous improvement by adding better design and more content',
-    ],
-    logoSrc: 'suncokret-solarium-logo.png',
-    logoSize: 35,
-    location: 'Zagreb, Croatia',
-    website: 'https://solarijsuncokret.com',
-  },
-  {
-    company: 'Dormitory for high school students A.G.Matoš',
-    position: 'Volunteer',
-    duration: '2015 - 2016',
-    bulletPoints: ['Math and physics tutoring lessons'],
-    logoSrc: 'dormitory-logo.png',
-    logoSize: 40,
-    location: 'Zagreb, Croatia',
-    website: 'https://www.gustl.hr',
-  },
-];
+import otherExperience from '../data/other-experience.json';
 
 export default function WorkExperience() {
   return (
