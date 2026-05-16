@@ -27,7 +27,7 @@ export default function HomePage() {
 
   return (
     <Container my={40}>
-      <Card shadow="md" radius="md" withBorder>
+      <Card id="cv-content" shadow="md" radius="md" withBorder>
         <Card.Section>
           <Header />
         </Card.Section>
