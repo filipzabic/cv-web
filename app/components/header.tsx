@@ -19,46 +19,32 @@ export const Header = () => {
   const handleDownloadPdf = async () => {
     setPdfLoading(true);
     try {
-    const { toPng } = await import('html-to-image');
+    const { toJpeg } = await import('html-to-image');
     const { default: jsPDF } = await import('jspdf');
 
     const element = document.getElementById('cv-content');
     if (!element) return;
 
-    // Snapshot current color scheme and force light mode for PDF
+    // Force light mode for PDF
     const root = document.documentElement;
     const prevScheme = root.getAttribute('data-mantine-color-scheme');
     root.setAttribute('data-mantine-color-scheme', 'light');
-
-    // Wait one frame for styles to apply
     await new Promise<void>((resolve) => requestAnimationFrame(() => requestAnimationFrame(() => resolve())));
 
-    // Ensure all <img> elements in the CV are fully loaded
-    await Promise.all(
-      Array.from(element.querySelectorAll('img')).map(
-        (img) =>
-          img.complete
-            ? Promise.resolve()
-            : new Promise<void>((resolve) => {
-                img.onload = () => resolve();
-                img.onerror = () => resolve();
-              }),
-      ),
-    );
-
     const captureOptions = {
-      cacheBust: true,
-      pixelRatio: 2,
+      cacheBust: false,
+      pixelRatio: 1.5,
+      quality: 0.92,
       width: element.offsetWidth,
       height: element.offsetHeight,
     };
 
-    // html-to-image fetches external resources async on first call;
-    // calling twice ensures images are in its cache for the real capture.
-    await toPng(element, captureOptions);
-    const dataUrl = await toPng(element, captureOptions);
+    // First call fetches and caches all external resources (images, fonts).
+    // Second call uses the browser cache — fast on CDN-served pages.
+    await toJpeg(element, captureOptions);
+    const dataUrl = await toJpeg(element, captureOptions);
 
-    // Restore original color scheme
+    // Restore color scheme
     if (prevScheme) {
       root.setAttribute('data-mantine-color-scheme', prevScheme);
     } else {
@@ -77,13 +63,13 @@ export const Header = () => {
     let heightLeft = imgHeight;
     let position = 0;
 
-    pdf.addImage(dataUrl, 'PNG', 0, position, pageWidth, imgHeight);
+    pdf.addImage(dataUrl, 'JPEG', 0, position, pageWidth, imgHeight);
     heightLeft -= pageHeight;
 
     while (heightLeft > 0) {
       position = heightLeft - imgHeight;
       pdf.addPage();
-      pdf.addImage(dataUrl, 'PNG', 0, position, pageWidth, imgHeight);
+      pdf.addImage(dataUrl, 'JPEG', 0, position, pageWidth, imgHeight);
       heightLeft -= pageHeight;
     }
 
