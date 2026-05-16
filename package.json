@@ -10,15 +10,16 @@
     "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,css,scss,md}\""
   },
   "dependencies": {
+    "@fontsource/inter": "^5.2.8",
     "@ianvs/prettier-plugin-sort-imports": "^4.7.0",
     "@mantine/core": "8.3.10",
     "@mantine/hooks": "8.3.10",
+    "@react-pdf/renderer": "^4.5.1",
     "@tabler/icons-react": "^3.35.0",
     "@vercel/analytics": "^1.6.1",
     "@vercel/speed-insights": "^1.3.1",
-    "html-to-image": "^1.11.13",
-    "jspdf": "^4.2.1",
     "next": "16.0.10",
+    "pako": "^1.0.11",
     "react": "19.2.3",
     "react-dom": "19.2.3",
     "react-world-flags": "^1.6.0"
@@ -28,6 +29,7 @@
     "@types/node": "25.0.2",
     "@types/react": "19.2.7",
     "@types/react-dom": "19.2.3",
+    "@types/react-pdf": "^6.2.0",
     "@types/react-world-flags": "^1.6.0",
     "eslint": "^9.39.2",
     "eslint-config-mantine": "^4.0.3",

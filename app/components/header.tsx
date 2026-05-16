@@ -1,5 +1,6 @@
 'use client';
 
+import { createElement } from 'react';
 import { IconBrandGithub, IconBrandLinkedin, IconFileTypePdf, IconMoonStars, IconSun } from '@tabler/icons-react';
 import {
   ActionIcon,
@@ -19,65 +20,34 @@ export const Header = () => {
   const handleDownloadPdf = async () => {
     setPdfLoading(true);
     try {
-    const { toJpeg } = await import('html-to-image');
-    const { default: jsPDF } = await import('jspdf');
+      const { pdf } = await import('@react-pdf/renderer');
+      const { CvDocument } = await import('./cv-pdf');
 
-    const element = document.getElementById('cv-content');
-    if (!element) return;
+      // Pre-fetch profile image so react-pdf can embed it
+      let profileImage: string | undefined;
+      try {
+        const res = await fetch('/profile-image.jpg');
+        const blob = await res.blob();
+        profileImage = await new Promise<string>((resolve) => {
+          const reader = new FileReader();
+          reader.onload = () => resolve(reader.result as string);
+          reader.readAsDataURL(blob);
+        });
+      } catch { /* omit image if unavailable */ }
 
-    // Force light mode for PDF
-    const root = document.documentElement;
-    const prevScheme = root.getAttribute('data-mantine-color-scheme');
-    root.setAttribute('data-mantine-color-scheme', 'light');
-    await new Promise<void>((resolve) => requestAnimationFrame(() => requestAnimationFrame(() => resolve())));
-
-    const captureOptions = {
-      cacheBust: false,
-      pixelRatio: 1.5,
-      quality: 0.92,
-      width: element.offsetWidth,
-      height: element.offsetHeight,
-    };
-
-    // First call fetches and caches all external resources (images, fonts).
-    // Second call uses the browser cache — fast on CDN-served pages.
-    await toJpeg(element, captureOptions);
-    const dataUrl = await toJpeg(element, captureOptions);
-
-    // Restore color scheme
-    if (prevScheme) {
-      root.setAttribute('data-mantine-color-scheme', prevScheme);
-    } else {
-      root.removeAttribute('data-mantine-color-scheme');
-    }
-
-    const img = document.createElement('img');
-    img.src = dataUrl;
-    await new Promise<void>((resolve) => { img.onload = () => resolve(); });
-
-    const pdf = new jsPDF('p', 'mm', 'a4');
-    const pageWidth = pdf.internal.pageSize.getWidth();
-    const pageHeight = pdf.internal.pageSize.getHeight();
-    const imgHeight = (img.height * pageWidth) / img.width;
-
-    let heightLeft = imgHeight;
-    let position = 0;
-
-    pdf.addImage(dataUrl, 'JPEG', 0, position, pageWidth, imgHeight);
-    heightLeft -= pageHeight;
-
-    while (heightLeft > 0) {
-      position = heightLeft - imgHeight;
-      pdf.addPage();
-      pdf.addImage(dataUrl, 'JPEG', 0, position, pageWidth, imgHeight);
-      heightLeft -= pageHeight;
-    }
-
-    pdf.save('filip-zabic-cv.pdf');
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      const blob = await pdf(createElement(CvDocument, { profileImage }) as any).toBlob();
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'filip-zabic-cv.pdf';
+      a.click();
+      URL.revokeObjectURL(url);
     } finally {
       setPdfLoading(false);
     }
   };
+
 
   return (
     <>

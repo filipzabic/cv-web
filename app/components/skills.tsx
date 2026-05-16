@@ -9,17 +9,18 @@ import {
   IconTestPipe,
 } from '@tabler/icons-react';
 import { List, SimpleGrid, Text, ThemeIcon, Title } from '@mantine/core';
+import { skills as skillNames } from '../data/cv-data';
 
-const skills = [
-  { name: 'React', icon: IconBrandReact },
-  { name: '.NET', icon: IconCode },
-  { name: 'Docker', icon: IconBrandDocker },
-  { name: 'SQL', icon: IconBrandMysql },
-  { name: 'HTML/CSS', icon: IconFileTypeHtml },
-  { name: 'Playwright', icon: IconTestPipe },
-  { name: 'Python', icon: IconBrandPython },
-  { name: 'TypeScript', icon: IconFileTypeTs },
-];
+const skillIcons: Record<string, React.ComponentType<{ size?: number; stroke?: number }>> = {
+  React: IconBrandReact,
+  '.NET': IconCode,
+  Docker: IconBrandDocker,
+  SQL: IconBrandMysql,
+  'HTML/CSS': IconFileTypeHtml,
+  Playwright: IconTestPipe,
+  Python: IconBrandPython,
+  TypeScript: IconFileTypeTs,
+};
 
 export default function Skills() {
   return (
@@ -29,18 +30,21 @@ export default function Skills() {
       </Title>
       <List size="sm" p={0}>
         <SimpleGrid cols={{ base: 1, sm: 2, lg: 2 }} spacing={10}>
-          {skills.map((skill, index) => (
-            <List.Item
-              key={index}
-              icon={
-                <ThemeIcon color="blue" size={35} radius="md">
-                  <skill.icon size={30} stroke={1} />
-                </ThemeIcon>
-              }
-            >
-              <Text fw={600}>{skill.name}</Text>
-            </List.Item>
-          ))}
+          {skillNames.map((name) => {
+            const Icon = skillIcons[name];
+            return (
+              <List.Item
+                key={name}
+                icon={
+                  <ThemeIcon color="blue" size={35} radius="md">
+                    {Icon && <Icon size={30} stroke={1} />}
+                  </ThemeIcon>
+                }
+              >
+                <Text fw={600}>{name}</Text>
+              </List.Item>
+            );
+          })}
         </SimpleGrid>
       </List>
     </>
