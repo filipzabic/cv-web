@@ -1,5 +1,18 @@
 [
   {
+    "company": "Aero Club Mlinski Kamen",
+    "position": "Website development and maintenance",
+    "duration": "2026 - Present",
+    "bulletPoints": [
+        "Inital website development using Next.js", 
+        "Continuous improvements and updates"
+    ],
+    "logoSrc": "aero-club-mlinski-kamen-logo.png",
+    "logoSize": 75,
+    "location": "Zagreb, Croatia",
+    "website": "https://www.akmk.hr"
+  },
+  {
     "company": "Aero Club Penkala",
     "position": "Website development and maintenance",
     "duration": "2025 - Present",
